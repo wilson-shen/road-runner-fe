@@ -1,0 +1,155 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  :root {
+    /* shardcn-svelte */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 240 10% 3.9%;
+
+    --radius: 0.5rem;
+
+    /* System Fonts */
+    --font-nunito: Nunito, sans-serif; /* Regular, weight 400 */
+
+    /* tertiary | #3264FF */
+    --color-tertiary-50: 224, 232, 255; /* #E0E8FF */
+    --color-tertiary-100: 214, 224, 255; /* #D6E0FF */
+    --color-tertiary-200: 204, 216, 255; /* #CCD8FF */
+    --color-tertiary-300: 173, 193, 255; /* #ADC1FF */
+    --color-tertiary-400: 112, 147, 255; /* #7093FF */
+    --color-tertiary-500: 50, 100, 255; /* #3264FF */
+    --color-tertiary-600: 45, 90, 230; /* #2D5AE6 */
+    --color-tertiary-700: 38, 75, 191; /* #264BBF */
+    --color-tertiary-800: 30, 60, 153; /* #1E3C99 */
+    --color-tertiary-900: 25, 49, 125; /* #19317D */
+
+    /* quaternary | #9632FF */
+    --color-quaternary-50: 239, 224, 255; /* #EFE0FF */
+    --color-quaternary-100: 234, 214, 255; /* #EAD6FF */
+    --color-quaternary-200: 229, 204, 255; /* #E5CCFF */
+    --color-quaternary-300: 213, 173, 255; /* #D5ADFF */
+    --color-quaternary-400: 182, 112, 255; /* #B670FF */
+    --color-quaternary-500: 150, 50, 255; /* #9632FF */
+    --color-quaternary-600: 135, 45, 230; /* #872DE6 */
+    --color-quaternary-700: 113, 38, 191; /* #7126BF */
+    --color-quaternary-800: 90, 30, 153; /* #5A1E99 */
+    --color-quaternary-900: 74, 25, 125; /* #4A197D */
+
+    /* info | #32B4FF */
+    --color-info-50: 224, 244, 255; /* #E0F4FF */
+    --color-info-100: 214, 240, 255; /* #D6F0FF */
+    --color-info-200: 204, 236, 255; /* #CCECFF */
+    --color-info-300: 173, 225, 255; /* #ADE1FF */
+    --color-info-400: 112, 203, 255; /* #70CBFF */
+    --color-info-500: 50, 180, 255; /* #32B4FF */
+    --color-info-600: 45, 162, 230; /* #2DA2E6 */
+    --color-info-700: 38, 135, 191; /* #2687BF */
+    --color-info-800: 30, 108, 153; /* #1E6C99 */
+    --color-info-900: 25, 88, 125; /* #19587D */
+
+    /* success | #00C832  */
+    --color-success-50: 217, 247, 224; /* #D9F7E0 */
+    --color-success-100: 204, 244, 214; /* #CCF4D6 */
+    --color-success-200: 191, 241, 204; /* #BFF1CC */
+    --color-success-300: 153, 233, 173; /* #99E9AD */
+    --color-success-400: 77, 217, 112; /* #4DD970 */
+    --color-success-500: 0, 200, 50; /* #00C832 */
+    --color-success-600: 0, 180, 45; /* #00B42D */
+    --color-success-700: 0, 150, 38; /* #009626 */
+    --color-success-800: 0, 120, 30; /* #00781E */
+    --color-success-900: 0, 98, 25; /* #006219 */
+
+    /* warning | #FAB432 */
+    --color-warning-50: 254, 244, 224; /* #FEF4E0 */
+    --color-warning-100: 254, 240, 214; /* #FEF0D6 */
+    --color-warning-200: 254, 236, 204; /* #FEECCC */
+    --color-warning-300: 253, 225, 173; /* #FDE1AD */
+    --color-warning-400: 252, 203, 112; /* #FCCB70 */
+    --color-warning-500: 250, 180, 50; /* #FAB432 */
+    --color-warning-600: 225, 162, 45; /* #E1A22D */
+    --color-warning-700: 188, 135, 38; /* #BC8726 */
+    --color-warning-800: 150, 108, 30; /* #966C1E */
+    --color-warning-900: 123, 88, 25; /* #7B5819 */
+
+    /* danger | #FF3232 */
+    --color-danger-50: 255, 224, 224; /* #FFE0E0 */
+    --color-danger-100: 255, 214, 214; /* #FFD6D6 */
+    --color-danger-200: 255, 204, 204; /* #FFCCCC */
+    --color-danger-300: 255, 173, 173; /* #FFADAD */
+    --color-danger-400: 255, 112, 112; /* #FF7070 */
+    --color-danger-500: 255, 50, 50; /* #FF3232 */
+    --color-danger-600: 230, 45, 45; /* #E62D2D */
+    --color-danger-700: 191, 38, 38; /* #BF2626 */
+    --color-danger-800: 153, 30, 30; /* #991E1E */
+    --color-danger-900: 125, 25, 25; /* #7D1919 */
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+

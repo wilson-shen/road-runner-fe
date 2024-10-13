@@ -1,0 +1,29 @@
+{
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "bracketSameLine": false,
+  "bracketSpacing": true,
+  "htmlWhitespaceSensitivity": "css",
+  "overrides": [
+    {
+      "files": "*.svelte",
+      "options": {
+        "parser": "svelte"
+      }
+    }
+  ],
+  "plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
+  "printWidth": 120,
+  "proseWrap": "preserve",
+  "rangeEnd": 999999999,
+  "rangeStart": 0,
+  "semi": true,
+  "singleAttributePerLine": true,
+  "singleQuote": true,
+  "svelteIndentScriptAndStyle": true,
+  "tabWidth": 2,
+  "tailwindConfig": "./tailwind.config.ts",
+  "tailwindFunctions": ["clsx", "cva", "cn"],
+  "trailingComma": "es5",
+  "useTabs": false
+}
