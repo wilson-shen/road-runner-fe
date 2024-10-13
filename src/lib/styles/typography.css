@@ -1,12 +1,45 @@
 @font-face {
-  font-family: "Nunito";
+  font-family: 'Nunito';
   src: url('../fonts/Nunito-VariableFont_wght.ttf');
   font-weight: 400;
   font-style: normal;
 }
 
-html, body, :root{
+html,
+body,
+:root {
   font-size: 16px;
   font-family: 'Nunito', sans-serif;
 }
 
+h1 {
+  @apply p-0 text-3xl font-bold lg:text-4xl;
+}
+
+h2 {
+  @apply p-0 text-2xl font-bold lg:text-3xl;
+}
+
+h3 {
+  @apply p-0 text-xl font-bold lg:text-2xl;
+}
+
+h4 {
+  @apply p-0 text-lg font-bold lg:text-xl;
+}
+
+h5 {
+  @apply p-0 text-base font-bold lg:text-lg;
+}
+
+h6 {
+  @apply p-0 text-sm font-bold lg:text-base;
+}
+
+p {
+  @apply p-0 text-base font-normal;
+}
+
+small {
+  @apply p-0 text-[13px] font-normal;
+}
